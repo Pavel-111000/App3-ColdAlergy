@@ -41,6 +41,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergy_percent = 0;
 	var cold_percent = 0;
+	var printedResults;
 
 	//Adds 1 to allergy_count when user indicates answer
         function allergyAdd(){
@@ -58,9 +59,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
-	function printResults() {
+	function printResults(divName) {
 		getPercent();
-		var printedResults = document.getElementById("resultButton");
 		printedResults.innerHTML = (allergy_percent + "% is the percent  your answers correspond to allergies\n" + //prints out the calculated allergy percent
 					    cold_percent +"% is the percent your answers correspond to a cold" //prints out the calculated cold percent
 
@@ -160,7 +160,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<a id="resultButton" button onclick="coldAdd()" class="w3-btn w3-black"> Results </a>
+		<a id="resultButton" button onclick="printResults();" onclick="window.print();return printedResults;" class="w3-btn w3-black"> Results </a>
     	</div>
 </div>
 
