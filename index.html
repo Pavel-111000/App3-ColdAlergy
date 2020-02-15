@@ -51,12 +51,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	
 	function getPercent() {
-		var allergy_percent = (allergy_count / 4) * 100; //calculated the total divided by four for allergy percentage
-		var cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
+		allergy_percent = (allergy_count / 4) * 100; //calculated the total divided by four for allergy percentage
+		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
-	getPercent();
-        document.write(allergy_percent + "% is the percent  your answers correspond to allergies\n"); //prints out the calculated allergy percent
-	document.write(cold_percent + "% is the percent your answers correspond to a cold"); //prints out the calculated cold percent
+	function printResults() {
+		getPercent();
+        	document.write(allergy_percent + "% is the percent  your answers correspond to allergies\n"); //prints out the calculated allergy percent
+		document.write(cold_percent + "% is the percent your answers correspond to a cold"); //prints out the calculated cold percent
+	}
 
   </script>
 
@@ -105,8 +107,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>   <!--Input the question wanted-->
-	<a href="#two" onclick="allergyAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+	<a href="#two" "onclick=allergyAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+	<a href="#two" "onclick=coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 
@@ -142,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>  <!--changed page content to question-->
 		<a href="#five" onclick="allergyAdd()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+		<a href="#five" onclick="printResults()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 	
@@ -152,7 +154,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<a onclick="coldAdd()" class="w3-btn w3-black"> Results </a>
+		<a button onclick="coldAdd()" class="w3-btn w3-black"> Results </a>
     	</div>
 </div>
 
