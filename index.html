@@ -38,17 +38,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	var allergy_percent = 0;
+	var cold_percent = 0;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function getPercent() {
+		var allergy_percent = (allergy_count / 4) * 100;
+		var cold_percent = (cold_count / 4) * 100;	
+	}
 
   </script>
 
@@ -133,8 +138,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>  <!--changed page content to question-->
-		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+		<a href="#five" onclick="allergyAdd()getPercent()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+		<a href="#five" onclick="coldAdd()getPercent()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 	
@@ -144,9 +149,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>
 		<script type="text/javascript">
-        		document.write(allergy_count)
+        		document.write(allergy_percent + "% is the percent  your answers correspond to allergies") //prints out the calculated allergy percent
+			document.write(cold_percent + "% is the percent your answers correspond to a cold") //prints out the calculated cold percent
     	</div>
 </div>
 
