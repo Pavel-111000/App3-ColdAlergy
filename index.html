@@ -133,13 +133,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="four"> <!--fourth page with id four-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> 
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>  <!--changed page content to question-->
-		<a href="#five" onclick="allergyAdd()getPercent()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-		<a href="#five" onclick="coldAdd()getPercent()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+		<a href="#five" onclick="allergyAdd()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 	
@@ -150,7 +150,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
 		<script type="text/javascript">
-        		document.write(allergy_percent + "% is the percent  your answers correspond to allergies") //prints out the calculated allergy percent
+        		document.write(getPercent() allergy_percent + "% is the percent  your answers correspond to allergies\n") //prints out the calculated allergy percent
 			document.write(cold_percent + "% is the percent your answers correspond to a cold") //prints out the calculated cold percent
 		</script>
     	</div>
