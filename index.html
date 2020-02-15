@@ -36,24 +36,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//Variables to hold user answers and percentages
         var allergy_count = 0;
         var cold_count = 0;
 	var allergy_percent = 0;
 	var cold_percent = 0;
 
-
+	//Adds 1 to allergy_count when user indicates answer
         function allergyAdd(){
             allergy_count = allergy_count + 1; //this function will add when participant click on yes or no
         }
 
+	//Adds 1 to cold_count when user indicates answer
         function coldAdd(){
             cold_count = cold_count + 1; //this function will add when participant clicks yes or no
         }
 	
+	//Claculates percent of Allergy Answers & Cold Answers and stores them
 	function getPercent() {
 		allergy_percent = (allergy_count / 4) * 100; //calculated the total divided by four for allergy percentage
 		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
+	//Gets the Percents when results is pushed and prints the results to the user
 	function printResults() {
 		getPercent();
         	document.write(allergy_percent + "% is the percent  your answers correspond to allergies\n"); //prints out the calculated allergy percent
