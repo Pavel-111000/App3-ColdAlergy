@@ -113,8 +113,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>   <!--Input the question wanted-->
-	<a href="#two" onclick="allergyAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 
@@ -125,8 +125,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p> <!--page content changed to question-->
-		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
-		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> <!--no button added to allergy variable-->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a> <!--no button added to allergy variable-->
 	</div>
 </div>	
 	
@@ -137,8 +137,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Do you have a sore throat?</p> <!--changed page content to question-->
-		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
-		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black"> No </a>	<!--no button added to allergy variable-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to allergy variable-->
     	</div>
 </div>
 	
@@ -149,8 +149,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>  <!--changed page content to question-->
-		<a href="#five" onclick="allergyAdd()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-		<a href="#five" onclick="printResults()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+		<a href="#five" onclick="allergyAdd();"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+		<a href="#five" onclick="printResults();" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 	
@@ -162,9 +162,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
 		<script>
 			printResults();
-		</script>
-		<p> "The percent your answers correspond to allergies is: " + <span id="allergy%"></span> + "%." </p>
-		<p> "The percent your answers correspond to a cold is: " + <span id="cold%"></span> + "%." </p>
+		</script> 
+		<p> The percent your answers correspond to allergies is: <span id="allergy%"></span>%. </p>
+		<p> The percent your answers correspond to a cold is: <span id="cold%"></span>%. </p>
 		
     	</div>
 </div>
