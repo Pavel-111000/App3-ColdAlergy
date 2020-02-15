@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergy_percent = 0;
 	var cold_percent = 0;
-	var printedResults;
+	var printedResults; 
 
 	//Adds 1 to allergy_count when user indicates answer
         function allergyAdd(){
@@ -59,10 +59,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
-	function printResults(divName) {
+	function printResults() {
 		getPercent();
-		printedResults.innerHTML = (allergy_percent + "% is the percent  your answers correspond to allergies\n" + //prints out the calculated allergy percent
-					    cold_percent +"% is the percent your answers correspond to a cold" //prints out the calculated cold percent
+		document.getElementById("allergy%").innerHTML = allergy_percent;
+		document.getElementById("cold%").innerHTML = cold_percent;
 
 	}
 
@@ -160,7 +160,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<a id="resultButton" button onclick="printResults();" onclick="window.print();return printedResults;" class="w3-btn w3-black"> Results </a>
+		<script>
+			printResults();
+		</script>
+		<p> "The percent your answers correspond to allergies is: " + <span id="allergy%"></span> + "%." </p>
+		<p> "The percent your answers correspond to a cold is: " + <span id="cold%"></span> + "%." </p>
+		
     	</div>
 </div>
 
