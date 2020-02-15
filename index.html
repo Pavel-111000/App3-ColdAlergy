@@ -54,6 +54,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var allergy_percent = (allergy_count / 4) * 100; //calculated the total divided by four for allergy percentage
 		var cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
+	getPercent();
+        document.write(allergy_percent + "% is the percent  your answers correspond to allergies\n"); //prints out the calculated allergy percent
+	document.write(cold_percent + "% is the percent your answers correspond to a cold"); //prints out the calculated cold percent
 
   </script>
 
@@ -149,11 +152,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<script type="text/javascript">
-			getPercent();
-        		document.write(allergy_percent + "% is the percent  your answers correspond to allergies\n"); //prints out the calculated allergy percent
-			document.write(cold_percent + "% is the percent your answers correspond to a cold"); //prints out the calculated cold percent
-		</script>
+		<a onclick="coldAdd()" class="w3-btn w3-black"> Results </a>
     	</div>
 </div>
 
